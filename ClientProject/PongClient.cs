@@ -351,7 +351,7 @@ namespace PongGame
                 if (canRead)
                 {
                     // Read in one datagram
-                    IPEndPoint ep = new IPEndPoint(IPAddress.Parse("172.20.10.11"), 6000);
+                    IPEndPoint ep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 6000);
                     byte[] data = _udpClient.Receive(ref ep);              // Blocks
 
                     // Enque a new message
@@ -499,7 +499,7 @@ namespace PongGame
         public static void Main(string[] args)
         {
             // Get arguements
-            string hostname = args[0].Trim();
+            string hostname = "127.0.0.1"; //args[0].Trim();
             int port = 6000;//int.Parse(args[1].Trim());
 
             // Start the client

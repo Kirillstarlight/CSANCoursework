@@ -288,7 +288,7 @@ namespace ServerProject
         public static void Main(string[] args)
         {
             // Setup the server
-            int port = 6000; //int.Parse(args[0].Trim());
+            int port = 6000; // int.Parse(args[0].Trim());
             server = new PongServer(port);
 
             // Add the Ctrl-C handler
